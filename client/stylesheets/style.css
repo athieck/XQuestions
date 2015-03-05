@@ -5,17 +5,68 @@ body {
 }
 
 .board {
-	margin-left:auto;
-	margin-right: auto;
 	padding-top: 2%;
+	float: right;
 
 	width: 800px;
 	height: 800px;
 	text-align:center;
 }
- 
- .board img {
+
+.tags {
+	text-align: center;
+	margin-left: auto;
+	margin-right: auto;
+	padding-left: 8%;
+	padding-top: 2%;
+}
+
+.tag {
+	text-align: center;
+	padding-top: 0px;
+	padding-bottom: 0px;
+	width: 400px;
+	height: 45px;
+	background-color: #fff;
+	border-radius: 5px;
+	border-style: solid;
+	border-width: 1px;
+}
+
+.guess {
+	position: absolute;
+	right: 4%;
+}
+
+.btn {
+	text-align: center;
+	padding-top: 0px;
+	padding-bottom: 0px;
+	width: 200px;
+	height: 45px;
+	background-color: #fcc105;
+	border-radius: 5px;
+	border-style: solid;
+	border-width: 1px;
+}
+
+.btn h1 {
+	text-align: center;
+	position: relative;
+	bottom: 12px;
+}
+
+.btn:hover {
+	background-color: #ff981d;
+}
+
+ .background {
  	position: relative;
+ 	float: left;
+ }
+
+ .background img {
+ 	padding-top: 12px;
  }
 
 .nav ul {

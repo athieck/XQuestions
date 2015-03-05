@@ -1,0 +1,17 @@
+<template name="board">
+	<div class="board">
+		{{#each randomImages}}
+			{{> image}}
+		{{/each}}
+
+	</div>
+	<div class="tags">
+		{{#each tags}}
+			{{> tag}}
+		{{/each}}
+	</div>
+	<br>
+	<div class="guess">
+		{{> guess}}
+	</div>
+</template>

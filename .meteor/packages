@@ -12,3 +12,4 @@ cfs:ejson-file
 iron:router
 accounts-ui
 accounts-password
+reactive-var

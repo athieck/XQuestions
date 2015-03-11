@@ -1,4 +1,7 @@
 <template name="board">
+	<div class="roundCounter">
+		{{> roundCounter}}
+	</div>
 	<div class="board">
 		{{#each randomImages}}
 			{{> image}}
@@ -11,7 +14,12 @@
 		{{/each}}
 	</div>
 	<br>
+	{{#if isNotDone}}
 	<div class="guess">
 		{{> guess}}
+	</div>
+	{{/if}}
+	<div class="restart">
+		{{> restart}}
 	</div>
 </template>

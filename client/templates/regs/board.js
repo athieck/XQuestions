@@ -1,8 +1,8 @@
 Template.board.helpers({
 	randomImages: function() {
 		var isRecentlyUpdated = Session.get('recentlySubmitted');
-		if (imagesUsed[0] == undefined) {
-			var numImages = 20;
+		var numImages = 20;
+		if (imagesUsed[numImages-1] == undefined && hasGameStarted === false) {
 			var allImages = Images.find().fetch();
 			var numArray = [];
 			console.log(imagesUsed.length);
@@ -15,6 +15,17 @@ Template.board.helpers({
 	 		var loc2 = Math.floor(Math.random() * imagesUsed.length);
 	 		console.log(imagesUsed[loc2]);
 	 		targetImage = imagesUsed[loc2];
+	 		if (imagesUsed.length === numImages) {
+	 			var noImagesUndefined = true;
+	 			for (var i = 0; i < imagesUsed.length; i++) {
+	 				if (imagesUsed[i] == undefined) {
+	 					noImagesUndefined = false;
+	 				}
+	 			}
+	 			if (noImagesUndefined === true) {
+	 				hasGameStarted = true;
+	 			}
+	 		}
  		} else {
  			if (isRecentlyUpdated === true) {
  				var isInSelected = isTargetInSelected();
@@ -30,7 +41,7 @@ Template.board.helpers({
 	 					}
 	 				}
 	 			}
-	 			selectedImages.splice(0, selectedImages.length);
+	 			clearSelectedImages();
 				Session.set('selectedTag', 0);
  			}
  		}
@@ -41,6 +52,8 @@ Template.board.helpers({
 		return Tags.find().fetch();
 	}
 })
+
+hasGameStarted = false;
 
 targetImage = "";
 imagesUsed = [];

@@ -16,11 +16,13 @@ Template.tag.events({
 			template.bColor.set("#27ace3");
 			template.isSelected.set(true);
 			Session.set('selectedTag', template.data._id);
+			
 
 		} else {
 			template.bColor.set("#fff");
 			template.isSelected.set(false);
 			Session.set('selectedTag', 0);
+
 		}
 	}
 });

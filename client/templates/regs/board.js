@@ -35,11 +35,14 @@ Template.board.helpers({
 		 				imagesUsed.splice(imageIndex, 1);
 		 			}
 	 			} else {
-	 				for (var i = 0; i < imagesUsed.length; i++) {
-	 					if (findIdInSelected(imagesUsed[i]._id) === false) {
-	 						imagesUsed.splice(i, 1);
+	 				var imagesUsedLength = imagesUsed.length;
+	 				var newImagesUsed = [];
+	 				for (var i = 0; i < imagesUsedLength; i++) {
+	 					if (findIdInSelected(imagesUsed[i]._id) === true) {
+	 						newImagesUsed[newImagesUsed.length] = imagesUsed[i];
 	 					}
 	 				}
+	 				imagesUsed = newImagesUsed;
 	 			}
 	 			clearSelectedImages();
 				Session.set('selectedTag', 0);

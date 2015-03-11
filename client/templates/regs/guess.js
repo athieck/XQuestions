@@ -11,7 +11,7 @@ Template.guess.events({
 	'click .btn': function(event, template) {
 		//The big moment! decide and remove all the images!
 		Session.set('recentlySubmitted', true);
-		Meteor.setTimeout(resetGuessButton, 1000);
+		Meteor.setTimeout(resetGuessButton, 2000);
 	}
 });
 

@@ -1,0 +1,15 @@
+<template name="dataviz">
+    <div>
+<center><h3>Top 20 Pictures</h3></center>
+    </div>
+    <div id="centerboard" class="board">
+        {{#each randomImages}}
+            {{> image2}}
+        {{/each}}
+
+    </div>
+    <br>
+    {{#if isNotDone}}
+    {{/if}}
+
+</template>

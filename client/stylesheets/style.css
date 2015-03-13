@@ -4,10 +4,20 @@ body {
   background: #ccc;
 }
 
+h3 {
+font-size:300%;
+}
+
+#centerboard {
+  margin: auto;  
+  position: absolute;
+  left:0;
+  right: 0;
+} 
+
 .board {
 	padding-top: 2%;
 	float: right;
-
 	width: 800px;
 	height: 800px;
 	text-align:center;
@@ -42,7 +52,7 @@ body {
 .guess {
 	position: absolute;
 	right: 4%;
-}
+} 
 
 .btn {
 	text-align: center;

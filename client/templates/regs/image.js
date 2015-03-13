@@ -30,7 +30,8 @@ Template.image.events({
 			} else {
 				template.bColor.set("#fa3736");
 			}
-		} else {
+		}
+		else {
 			template.bColor.set("#ccc");
 			template.isSelected.set(false);
 			removeSelectedImage(template.data._id);
